@@ -20,6 +20,9 @@ html {
 body {
     margin-top: 0;
     margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 a {
@@ -84,6 +87,21 @@ aside ul li a {
     align-items: center;
 }
 
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+}
+
 h1 {
     text-shadow: 10px 10px 5px var(--couleur-noire);
     font-size: 3rem;
@@ -125,6 +143,29 @@ footer {
     gap: 1rem;
 }
 
+/* activites  */
+.intro-para {
+    padding: 2rem;
+    background-color: var(--couleur-tertiaire);
+    color: var(--couleur-blanche);
+    text-align: center;
+    
+}
+
+.sport-presentation {
+    background-color: var(--couleur-secondaire);
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.sport-presentation .col {
+    width: 100%;
+}
+
+p, ul {
+    line-height: 1.5;
+}
+
 /* style par defaut (mobile-first) */
 @media (max-width: 767px) {
 
@@ -143,6 +184,8 @@ footer {
     .conteneur-main {
         margin-left: 3rem;
         width: calc(100% - 2rem);
+        display: flex;
+        flex-direction: column;
     }
 
     .hiver, .luge {
