@@ -158,12 +158,81 @@ footer {
     margin-bottom: 2rem;
 }
 
-.sport-presentation .col {
+p, ul {
+    line-height: 1.5;
+}
+
+.nom-sport {
+    font-weight: 600;
+}
+
+.liste-filante {
+    justify-content: center;
+}
+
+.sport-presentation .row {
     width: 100%;
 }
 
-p, ul {
-    line-height: 1.5;
+.sport-presentation .row div.col:first-of-type {
+    width: 75%;
+}
+
+.liste-filante {
+    overflow: hidden;
+    max-width: 20rem;
+}
+
+.liste-filante ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    animation: slide 12s infinite;
+}
+
+.liste-filante li {
+    flex: 0 0 100%;
+}
+
+.liste-filante img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.liste-filante:hover ul {
+    animation-play-state: paused;
+}
+
+.liste-filante img:hover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.6);
+    z-index: 1000;
+    max-width: 80vw;
+    max-height: 80vh;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    background: var(--couleur-blanche);
+}
+
+.liste-filante img:hover::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+@keyframes slide {
+    0%, 30% {
+        transform: translateX(0);
+    }
+
+    33%, 63% {
+        transform: translateX(-100%);
+    }
+
+    66%, 100% {
+        transform: translateX(-200%);
+    }
 }
 
 /* style par defaut (mobile-first) */
